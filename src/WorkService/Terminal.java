@@ -10,33 +10,26 @@ public class Terminal {
                 String firstName;
                 String lastName;
                 String nameAccount;
-                int money;
+                int money1money;
                 try {
                     Dialog.enterFirstName();
                     firstName = DataInput.stringDataInPut();
                     VerificationService.verificatingNames(firstName);
-
                     Dialog.enterLastName();
                     lastName = DataInput.stringDataInPut();
                     VerificationService.verificatingNames(lastName);
-
                     Dialog.enterAmountOfMoney();
-                    money = DataInput.intDataInPut();
-                    VerificationService.verificatingAmountOfMoney(money);
-
-
+                    money1money = DataInput.intDataInPut();
+                    VerificationService.verificatingAmountOfMoney(money1money);
                     Dialog.enterTargetBankAccount();
                     nameAccount = DataInput.stringDataInPut();
                     VerificationService.verificatingBankAccount(nameAccount);
-
                 }
                 catch(ValidationException ex){
                         Dialog.printErrorMessage(ex);
                         return;
                     }
-
-
-                Transaction transaction = Transaction.addTransaction(firstName, lastName, money, nameAccount);
+                Transaction transaction = Transaction.addTransaction(firstName, lastName, money1money, nameAccount);
 
                 ValidationException.validationCheckAccount(nameAccount, transaction);
 
