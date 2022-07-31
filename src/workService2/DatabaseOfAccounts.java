@@ -1,4 +1,4 @@
-package WorkService2;
+package workService2;
 
 public class DatabaseOfAccounts {
     public Account [] accounts;

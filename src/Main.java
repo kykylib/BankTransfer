@@ -1,18 +1,13 @@
 
-import WorkService.*;
+import workService2.*;
 
 
 public class Main {
-    public static void main(String[] args) throws ValidationException {
-
-        Account account1 = Account.addAccount("Svetlana", "Lib", "UA12345");
-        Account account2 = Account.addAccount("Nika", "Liberman", "UA54321");
-
-        while(true) {
-            Terminal.StartProgram();
+    public static void main(String[] args)  {
+        AccountDAO accountDAO = new AccountDAOImpl();
+        Terminal terminal = new Terminal(accountDAO);
+        while (true){
+            terminal.startProgram();
         }
-
-
-
     }
 }

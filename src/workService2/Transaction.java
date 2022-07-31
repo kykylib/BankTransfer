@@ -1,4 +1,4 @@
-package WorkService2;
+package workService2;
 
 import java.time.LocalDate;
 
@@ -10,7 +10,7 @@ public class Transaction {
     private String status;
     private final LocalDate date;
 
-    Transaction(String firstName,String lastName,int money,String nameOfAccount){
+    public Transaction(String firstName, String lastName, int money, String nameOfAccount) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.money = money;
@@ -18,31 +18,31 @@ public class Transaction {
         this.date = LocalDate.now();
     }
 
-    public String getFirstName(){
+    public String getFirstName() {
         return firstName;
     }
 
-    public String getLastName(){
+    public String getLastName() {
         return lastName;
     }
 
-    public String getNameOfAccount(){
+    public String getNameOfAccount() {
         return nameOfAccount;
     }
 
-    public int getMoney(){
+    public int getMoney() {
         return money;
     }
 
-    public String getStatus(){
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(String string){
+    public void setStatus(String string) {
         status = string;
     }
 
-    public LocalDate getData(){
+    public LocalDate getData() {
         return date;
     }
 

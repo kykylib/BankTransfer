@@ -1,4 +1,4 @@
-package WorkService2;
+package workService2;
 
 public class SecurityServiceException extends Exception{
     SecurityServiceException(){}

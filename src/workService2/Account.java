@@ -1,11 +1,11 @@
-package WorkService2;
+package workService2;
 
 
 public class Account {
-    private Transaction[] historyOfTransaction = new Transaction[1000];
-    private String firstName;
-    private String lastName;
-    private String accountName;
+    private Transaction[] historyOfTransaction = new Transaction[10];
+    private final String firstName;
+    private final String lastName;
+    private final String accountName;
     private String status;
     private int totalMoney;
 
@@ -35,8 +35,8 @@ public class Account {
         return totalMoney;
     }
 
-    public int setTotalmoney(int sum){
-        return totalMoney += sum;
+    public void setTotalmoney(int sum){
+        this.totalMoney += sum;
     }
 
     public String setStatus(String string){
@@ -46,22 +46,23 @@ public class Account {
 
     public void addTransactionToAccountHistory(Transaction transaction){
         for(int i=0;i<historyOfTransaction.length;i++){
-            if(historyOfTransaction[i]==null){
+           if(historyOfTransaction[i]==null){
                 historyOfTransaction[i] = transaction;
                 break;
-            }
+           }
         }
     }
 
-    public void getHistoryOfAccount(){
+    public void showHistoryOfAccount(){
         for(int i=0;i<historyOfTransaction.length;i++){
             if(historyOfTransaction[i]!=null){
-                System.out.println("Transaction - " + (i+1)  + "\n" + "First name: " + historyOfTransaction[i].getFirstName() + "\n" + "Last name: " + historyOfTransaction[i].getLastName() + "\n" + "Money: " + historyOfTransaction[i].getMoney() + "\n" + "Status: " + historyOfTransaction[i].getStatus() + "\n");
+                System.out.println("Transaction - " + (i+1)  + "\n" + "First name: " + historyOfTransaction[i].getFirstName() + "\n" + "Last name: " + historyOfTransaction[i].getLastName() + "\n" + "Money: " + historyOfTransaction[i].getMoney() + "\n" + "Status: " + historyOfTransaction[i].getStatus() + "\n" + "Time: " + historyOfTransaction[i].getData() + "\n");
             }
             if(historyOfTransaction[0]==null){
                 System.out.println("Account history is clear");
                 break;
             }
         }
+
     }
 }
