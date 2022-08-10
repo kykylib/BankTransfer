@@ -13,7 +13,7 @@ public class VerificationService {
 
     public String checksTheNames(String name) throws DataInputException {
         Matcher matcher = pattern_name.matcher(name);
-        if (matcher.find() != true) {
+        if (!matcher.find()) {
             throw new DataInputException("incorrectly name");
         }
         return name;
@@ -28,7 +28,7 @@ public class VerificationService {
 
     public String checksTheAccountName(String account) throws DataInputException {
         Matcher matcher = pattern_accountName.matcher(account);
-        if (matcher.find() != true) {
+        if (!matcher.find()) {
             throw new DataInputException("incorrectly account");
         }
         return account;

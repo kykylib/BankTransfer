@@ -8,7 +8,7 @@ public class Transaction {
     private String nameOfAccount;
     private int money;
     private String status;
-    private final LocalDate date;
+    private LocalDate date = null;
 
     public Transaction(String firstName, String lastName, int money, String nameOfAccount) {
         this.firstName = firstName;
@@ -16,6 +16,8 @@ public class Transaction {
         this.money = money;
         this.nameOfAccount = nameOfAccount;
         this.date = LocalDate.now();
+    }
+    public Transaction() {
     }
 
     public String getFirstName() {

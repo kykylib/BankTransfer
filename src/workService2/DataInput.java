@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class DataInput {
 
-    public static Scanner scannerString = new Scanner(System.in);
-    public static Scanner scannerInt = new Scanner(System.in);
+    private static final Scanner scannerString = new Scanner(System.in);
+    private static final Scanner scannerInt = new Scanner(System.in);
 
     public static String stringDataInPut() {
         return scannerString.nextLine();
